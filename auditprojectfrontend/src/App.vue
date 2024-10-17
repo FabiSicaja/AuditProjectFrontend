@@ -1,15 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import Registro from './components/Registro.vue';
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -18,7 +14,19 @@ import HelloWorld from './components/HelloWorld.vue'
   </header>
 
   <RouterView />
+
+  <div id="app">
+    <Registro />
+  </div>
 </template>
+
+<script>
+export default {
+  components: {
+    Registro
+  }
+};
+</script>
 
 <style scoped>
 header {
